@@ -1,0 +1,29 @@
+{
+  "name": "reader",
+  "description": "html5 搭建的阅读器\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C webapp",
+  "main": "index.js",
+  "authors": [
+    "lichaohui"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "reader"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "^1.2.0"
+  },
+  "devDependencies": {
+    "zepto": "^1.2.0",
+    "base64": "^1.0.1",
+    "jsonp": "^0.0.1",
+    "bootstrap": "^3.3.7"
+  }
+}
