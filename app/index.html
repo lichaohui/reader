@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
     <title>reader</title>
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/bootswatch/cosmo/bootstrap.min.css" rel="stylesheet" id="theme">
     <link href="../public/css/animate.css" rel="stylesheet">
     <link href="../public/css/index.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="">
     <nav class="navbar navbar-default navbar-fixed-top toggle-nav animated slideOutUp" data-animate-in='slideInDown' data-animate-out='slideOutUp'>
       <div class="container">
         <button type="button" class="btn btn-default navbar-btn" aria-label="Left Align">
@@ -29,26 +29,12 @@
     </div>
     <div class="navbar navbar-default navbar-fixed-bottom toggle-nav animated fadeOutDown" data-animate-in='fadeInUp' data-animate-out='fadeOutDown'>
       <div class="container">
-        <button class="btn btn-default" type="submit">列表</button>
-        <button type="button" class="btn btn-default">夜间</button>
-        <div class="btn-group dropup navbar-btn">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            字号 <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">小</a></li>
-            <li><a href="#">中</a></li>
-            <li><a href="#">大</a></li>
-          </ul>
-        </div>
+        <button class="btn btn-default" type="button">列表</button>
         <div class="btn-group dropup navbar-btn">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             背景 <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">红</a></li>
-            <li><a href="#">黄</a></li>
-            <li><a href="#">蓝</a></li>
+          <ul class="dropdown-menu" id='theme-menu'>
           </ul>
         </div>
       </div>
@@ -56,6 +42,7 @@
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
     <script src="../bower_components/jsonp/jsonp.js"></script>
+    <script src="../public/js/theme.js"></script>
     <script src="../public/js/index.js"></script>
   </body>
 </html>
