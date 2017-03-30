@@ -158,19 +158,6 @@
       "scssVariables": "../bower_components/bootswatch/slate/_variables.scss"
     },
     {
-      "name": "Solar",
-      "description": "A spin on Solarized",
-      "thumbnail": "../bower_components/bootswatch/solar/thumbnail.png",
-      "preview": "../bower_components/bootswatch/solar/",
-      "css": "../bower_components/bootswatch/solar/bootstrap.css",
-      "cssMin": "../bower_components/bootswatch/solar/bootstrap.min.css",
-      "cssCdn": "https://maxcdn.bootstrapcdn.com/bootswatch/latest/solar/bootstrap.min.css",
-      "less": "../bower_components/bootswatch/solar/bootswatch.less",
-      "lessVariables": "../bower_components/bootswatch/solar/variables.less",
-      "scss": "../bower_components/bootswatch/solar/_bootswatch.scss",
-      "scssVariables": "../bower_components/bootswatch/solar/_variables.scss"
-    },
-    {
       "name": "Spacelab",
       "description": "Silvery and sleek",
       "thumbnail": "../bower_components/bootswatch/spacelab/thumbnail.png",

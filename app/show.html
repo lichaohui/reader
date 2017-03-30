@@ -17,16 +17,11 @@
       </div>
     </nav>
     <div class="container" id='container'>
+      <h2 id='title'></h2>
+      <hr>
+      <p id='para'></p>
       <br>
-      <ul class="media-list" id="chapters">
-      </ul>
     </div>
-    <div class="text-center">
-      <button type="button" class="btn btn-default" aria-label="Left Align" title="更多" id="more" data-start=''>
-        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-      </button>
-    </div>
-    <br>
     <div class="navbar navbar-default navbar-fixed-bottom toggle-nav animated fadeOutDown" data-animate-in='fadeInUp' data-animate-out='fadeOutDown'>
       <div class="container">
         <a href="http://localhost:3000/app/" class="btn btn-default" type="button">列表</a>
@@ -41,8 +36,10 @@
     </div>  
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
+    <script src="../bower_components/jsonp/jsonp.js"></script>
     <script src="../public/js/theme.js"></script>
     <script src="../public/js/common.js"></script>
-    <script src="../public/js/index.js"></script>
+    <script src="../public/js/getRequest.js"></script>
+    <script src="../public/js/show.js"></script>
   </body>
 </html>

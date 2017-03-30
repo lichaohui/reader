@@ -1,27 +1,26 @@
 $(function(){
-  //上下导航栏的显示和隐藏效果切换
-  let isNavShow=false;
-  function toggleNav(){
-    let toggleNav,i,animateIn,animateOut;
-    toggleNav=$('.toggle-nav');
-    if(isNavShow){
-      for(i=0;i<toggleNav.length;i++){
-        animateIn=toggleNav.eq(i).attr('data-animate-in');
-        animateOut=toggleNav.eq(i).attr('data-animate-out');
-        toggleNav.eq(i).removeClass(animateIn).addClass(animateOut);
+  //获取章节列表的函数
+  function getChapters(start,limit=10){
+    $.get('data/chapter.json',function(data,status){
+      if(data.msg=='success'){
+        if(start<data.chapters.length){
+          var media;
+          $('#more').attr('data-start',start+limit);
+          for(var i=start;i<start+limit;i++){
+            media='<li class="media"><div class="media-body"><h4 class="media-heading"><a href="show.html?cid='+data.chapters[i].id+'">'+data.chapters[i].title+'</a></h4><p>'+data.chapters[i].summary+'</P></div></li>';
+            $('#chapters').append(media);
+          }
+        }else{
+          alert('没有更多了！');
+        }
       }
-      isNavShow=false;
-    }else{
-      for(i=0;i<toggleNav.length;i++){
-        animateIn=toggleNav.eq(i).attr('data-animate-in');
-        animateOut=toggleNav.eq(i).attr('data-animate-out');
-        toggleNav.eq(i).removeClass(animateOut).addClass(animateIn);
-      }
-      isNavShow=true;
-    }
+    })
   }
-  //点击内容区域的时候调用toggleNav()方法显示或隐藏
-  $('#container').click(function(){
-    toggleNav();
-  });
+  //页面渲染完毕后调用getChapters函数加载一部分章节信息
+  getChapters(0,1);
+  //点击加载更多的时候获取更多章节信息
+  $('#more').click(function(){
+    var start=parseInt($(this).attr('data-start'));
+    getChapters(start);
+  })
 })
