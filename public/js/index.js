@@ -1,7 +1,7 @@
 $(function(){
   //获取章节列表的函数
-  function getChapters(start,limit=10){
-    $.get('data/chapter.json',function(data,status){
+  function getChapters(start,limit=10){;
+    $.get('data/chapter.json').done(function(){
       if(data.msg=='success'){
         if(start<data.chapters.length){
           var media;
@@ -14,7 +14,11 @@ $(function(){
           alert('没有更多了！');
         }
       }
-    })
+    }).fail(function(){})
+    /*$.get('data/chapter.json',function(data,status){
+      
+      }
+    })*/
   }
   //页面渲染完毕后调用getChapters函数加载一部分章节信息
   getChapters(0,1);
